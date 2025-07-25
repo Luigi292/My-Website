@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | Luigi Maretto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cookie.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+<body>
+
+    <!-- 3D Universe Background -->
+    <div id="universe"></div>
+    <div class="particles" id="particles-js"></div>
+    
+
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Luigi Maretto</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#about">About</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#portfolio">Work</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Cookie Policy Content -->
+    <main class="cookie-policy">
+        <h1>Cookie Policy</h1>
+        <span class="last-updated">Last Updated: June 2024</span>
+
+        <section>
+            <h2>1. Introduction</h2>
+            <p>This website (<strong>luigimaretto.com</strong>) respects your privacy. As of now, I do not use any cookies or tracking technologies that collect personal data.</p>
+        </section>
+
+        <section>
+            <h2>2. What Are Cookies?</h2>
+            <p>Cookies are small text files stored on your device when you visit websites. They are commonly used to remember preferences, analyze traffic, or enable functionality.</p>
+        </section>
+
+        <section>
+            <h2>3. Our Current Practice</h2>
+            <p>This static portfolio website operates without:</p>
+            <ul style="color: #94a3b8; padding-left: 1.5rem; list-style-type: disc;">
+                <li>Analytics cookies</li>
+                <li>Advertising cookies</li>
+                <li>Functional cookies</li>
+                <li>Any other tracking mechanisms</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Third-Party Services</h2>
+            <p>External links (e.g., GitHub, LinkedIn) may use cookies, but these are governed by their respective privacy policies, not mine.</p>
+        </section>
+
+        <section>
+            <h2>5. Policy Updates</h2>
+            <p>Should I implement cookies in the future, I will:</p>
+            <ol style="color: #94a3b8; padding-left: 1.5rem;">
+                <li>Update this policy</li>
+                <li>Obtain user consent where required by law (GDPR/CCPA)</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>6. Contact</h2>
+            <p>For questions, email <a href="mailto:luigimaretto292@gmail.com">luigimaretto292@gmail.com</a>.</p>
+        </section>
+    </main>
+
+
+
+   <!-- Footer -->
+   
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html#hero" class="logo">Luigi Maretto</a>
+                <p>Full-Stack Developer creating digital experiences</p>
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/luigi-maretto" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Luigi292" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:luigimaretto292@gmail.com" aria-label="Email" id="emailLink" style="cursor:pointer;">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <script>
+                        document.getElementById('emailLink').addEventListener('click', function(event) {
+                            event.preventDefault();
+                            const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=luigimaretto292@gmail.com';
+                            const mailtoUrl = this.href;
+                            const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+                            if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                                window.location.href = mailtoUrl;
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Navigation</h4>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#experience">Experience</a>
+                    <a href="index.html#skills">Skills</a>
+                </div>
+                
+                <div class="link-group">
+                    <h4>Files</h4>
+                    <a href="Luigi Maretto - Resume.pdf" download>
+                        <span>Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="Portfolio.pdf" download>
+                        <span>Download My Portfolio</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </div>
+            </div>
+
+            <!-- Fixed Scroll Up Button -->
+            <div class="scroll-up-container">
+                <a href="#hero" class="scroll-up" id="scrollUp">
+                    <span>Back to Top</span>
+                    <div class="mouse-up">
+                        <div class="wheel-up"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Luigi Maretto. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Scripts -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="main.js"></script>
+
+
+
+    
+</body>
+</html>
