@@ -3,6 +3,7 @@
 
 /* ================ RESPONSIVE MEDIA QUERIES ================ */
 /* 4K and Large Desktop Screens (2560px and above) */
+
 @media (min-width: 2560px) {
     .container {
         max-width: 1600px;
@@ -76,6 +77,48 @@
         padding: 0 1.5rem;
     }
 
+        .glass-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-container {
+        padding: 0 1.5rem;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 80px);
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1rem;
+        transition: right 0.3s ease;
+        z-index: 999;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        border-radius: var(--radius-sm);
+    }
+
     .hero-buttons {
         display: flex;
         flex-direction: row;
@@ -103,6 +146,40 @@
     
     .nav-container {
         padding: 0 1.5rem;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 80px);
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1rem;
+        transition: right 0.3s ease;
+        z-index: 999;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        border-radius: var(--radius-sm);
     }
     
     .hero-content {
@@ -143,9 +220,7 @@
         white-space: nowrap;
     }
     
-    .scroll-down {
-        bottom: 1.5rem;
-    }
+ 
     
     .contact-container {
         grid-template-columns: 1fr;
@@ -334,6 +409,47 @@
     }
 }
 
+
+
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 80px);
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1rem;
+        transition: right 0.3s ease;
+        z-index: 999;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        border-radius: var(--radius-sm);
+    }
+}
+
+
+
 /* Large Mobile (481px - 600px) */
 @media (max-width: 600px) {
     .hero {
@@ -377,9 +493,7 @@
         white-space: nowrap;
     }
 
-    .scroll-down {
-        bottom: 1rem;
-    }
+ 
 
     .about-cta {
         display: flex;
@@ -1476,9 +1590,7 @@
         margin-bottom: 3rem;
     }
     
-    .scroll-down {
-        bottom: 0.8rem;
-    }
+ 
     
     .about-section {
         padding: 1rem 0;
@@ -1628,7 +1740,7 @@
         font-size: 12pt;
     }
     
-    .glass-nav, .scroll-down, .scroll-up-container {
+    .glass-nav, .scroll-up-container {
         display: none;
     }
     
@@ -1676,12 +1788,7 @@
         margin-bottom: 25%;
     }
     
-    /* Fix scroll down arrow positioning */
-    .scroll-down {
-        bottom: 0;
-        margin-top: 60%;
-     
-    }
+
     
     /* Fix navigation menu */
     .nav-links {
@@ -1902,5 +2009,312 @@
         .experience-timeline .timeline-content .tech-tags {
             margin-left: -1rem;
         }
+    }
+}
+
+
+
+/* ================ RESPONSIVE SECTION SPACING ================ */
+
+/* 4K and Large Desktop Screens (2560px and above) */
+@media (min-width: 2560px) {
+    .section {
+        
+    }
+    
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    .section-divider {
+        height: 100px;
+    }
+}
+
+/* Standard Desktop Screens (1440px - 2559px) */
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .section {
+        padding: 4.5rem 2rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2.75rem;
+        
+    }
+    
+    .section-divider {
+        height: 90px;
+    }
+}
+
+/* Small Desktop/Laptop (1201px - 1439px) */
+@media (min-width: 1201px) and (max-width: 1439px) {
+    .section {
+        padding: 4rem 2rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+    
+    .section-divider {
+        height: 80px;
+    }
+}
+
+/* Large Devices (1025px - 1200px) */
+@media (max-width: 1200px) {
+    .section {
+        padding: 3.5rem 1.5rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2.25rem;
+    }
+    
+    .section-divider {
+        height: 70px;
+    }
+}
+
+/* Tablet Landscape and Small Laptops (769px - 1024px) */
+@media (max-width: 1024px) {
+    .section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-divider {
+        height: 60px;
+    }
+}
+
+/* Tablet Portrait (601px - 768px) */
+@media (max-width: 768px) {
+    .section {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .section-header {
+        margin-bottom: 1.75rem;
+    }
+    
+    .section-divider {
+        height: 50px;
+    }
+}
+
+/* Large Mobile (481px - 600px) */
+@media (max-width: 600px) {
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-divider {
+        height: 40px;
+    }
+}
+
+/* Medium Mobile (414px - 480px) */
+@media (max-width: 480px) {
+    .section {
+        padding: 1.75rem 1rem;
+    }
+    
+    .section-header {
+        margin-bottom: 1.25rem;
+    }
+    
+    .section-divider {
+        height: 35px;
+    }
+}
+
+/* Small Mobile (375px - 413px) */
+@media (max-width: 413px) {
+    .section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .section-header {
+        margin-bottom: 1.1rem;
+    }
+    
+    .section-divider {
+        height: 30px;
+    }
+}
+
+/* Extra Small Mobile (320px - 374px) */
+@media (max-width: 374px) {
+    .section {
+        padding: 1.25rem 0.75rem;
+    }
+    
+    .section-header {
+        margin-bottom: 1rem;
+    }
+    
+    .section-divider {
+        height: 25px;
+    }
+}
+
+
+
+/* ================ TIMELINE SPACING ADJUSTMENTS ================ */
+.experience-timeline {
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+
+.timeline-item {
+    margin-bottom: 2rem; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .timeline-item {
+        margin-bottom: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-item {
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+
+
+/* ================ SCROLL DOWN ELEMENT FIXES ================ */
+
+/* Large screens (1500px and above) */
+@media (min-width: 1500px) {
+    .scroll-down {
+        bottom: 40px;
+    }
+}
+
+/* Standard desktop screens (1200px - 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+    .scroll-down {
+        bottom: 30px;
+    }
+}
+
+/* Small desktop/laptop (1025px - 1199px) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .scroll-down {
+        bottom: 25px;
+    }
+}
+
+/* Tablet landscape (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .scroll-down {
+        position: relative;
+        margin-top: 2rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+}
+
+/* Tablet portrait (601px - 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+    .scroll-down {
+        position: relative;
+        margin-top: 1.5rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+}
+
+/* Large mobile (481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+    .scroll-down {
+        position: relative;
+        margin-top: 1.5rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+}
+
+/* Medium mobile (414px - 480px) */
+@media (min-width: 414px) and (max-width: 480px) {
+    .scroll-down {
+        position: relative;
+        margin-top: 1.25rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+}
+
+/* Small mobile (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+    .scroll-down {
+        position: relative;
+        margin-top: 1rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+}
+
+/* Extra small mobile (320px - 374px) */
+@media (min-width: 320px) and (max-width: 374px) {
+    .scroll-down {
+        position: relative;
+        margin-top: 0.75rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+}
+
+/* Very small mobile (below 320px) */
+@media (max-width: 319px) {
+    .scroll-down {
+        position: relative;
+        margin-top: 0.5rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
+    }
+}
+
+/* Special cases for landscape modes */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .scroll-down {
+        position: relative;
+        margin-top: 1.5rem;
+        bottom: auto;
+        left: auto;
+        transform: none;
     }
 }
